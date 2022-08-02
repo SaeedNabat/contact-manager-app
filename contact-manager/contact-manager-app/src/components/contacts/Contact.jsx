@@ -1,6 +1,6 @@
 import { CURRENTLINE, CYAN, ORANGE, PURPLE , RED } from '../../helpers/colors';
 
-const Contact = ()=>{
+const Contact = ({contact})=>{
     return (
         <div className="col-md-6">
                         <div style={{
@@ -9,7 +9,7 @@ const Contact = ()=>{
                             <div className="card-body">
                                 <div className="row align-items-center d-flex justify-content-around">
                                     <div class="col-md-4 col-sm-4">
-                                        <img alt="" src="https://via.placeholder.com/200" style={{
+                                        <img alt={contact.fullname} src={contact.photo} style={{
                                             border:`1px solid ${PURPLE}`
                                         }}
                                         className="img-fluid rounded"/>
@@ -19,19 +19,19 @@ const Contact = ()=>{
                                             <li className="list-group-item list-group-item-dark">
                                                 نام و نام خانوادگی :{"  "}
                                                 <span className="fw-bold">
-                                                    یونس قربانی
+                                                    {contact.fullname}
                                                 </span>
                                             </li>
                                             <li className="list-group-item list-group-item-dark">
                                                 شماره موبایل :{"  "}
                                                 <span className="fw-bold">
-                                                    ۰۹۱۵۹۵۲۹۸۷۵
+                                                    {contact.mobile}
                                                 </span>
                                             </li>
                                             <li className="list-group-item list-group-item-dark">
                                                 آدرس ایمیل :{"  "}
                                                 <span className="fw-bold">
-                                                    SaeedNabati@hotmail.com
+                                                    {contact.email}
                                                 </span>
                                             </li>
                                         </ul>
