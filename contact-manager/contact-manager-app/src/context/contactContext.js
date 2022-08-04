@@ -1,0 +1,21 @@
+import {createContext} from 'react';
+export const ContactContext = createContext({
+    loading:false,
+    setLoading:()=>{},
+    contact:{},
+    setContact:()=>{},
+    contacts:[],
+    setContacts:()=>{},
+    filteredContacts:[],
+    setFilteredContacts:()=>{},
+    contactQuery:{},
+    groups:[],
+    group:{},
+    setGroup:()=>{},
+    setGroups:()=>{},
+    onContactChange:()=>{},
+    deleteContact:()=>{},
+    updateContact:()=>{},
+    createContact:()=>{},
+    contactSearch:()=>{},
+})
